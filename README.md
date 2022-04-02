@@ -117,9 +117,10 @@
           * Ans : **a loop** ( Code that iterates is often described as a loop, because the process moves from beginning to end and then starts over again at the beginning )
 
   ***
+  ***
     ### Iteration Tools ( looping Tools )
 
-        * **_For loop_**
+   * **_For loop_**
 
      ```python
      spices = [
@@ -194,6 +195,7 @@
   Here the output will be "**Our fruit selection :**" title followed by each fruit name.
 
    ***
+   ***
 
 ##  - **_External Code_**
 
@@ -240,6 +242,65 @@
 
     1. **Django** in python
     2. **React** in JavaScript
+
+  ***
+  ***
+##  - **_Working with strings_**
+
+  * **_Combining Strings_**
+
+    * Can combining string by using ' **+** ' operator
+      ``` python
+
+      value = input('Enter a number: ') # 50 as input
+      print(value + ' is my favorite number!')
+      ```
+      Here the output will be " **50 is my favorite number** ".
+      ---
+        ###  Notes : 
+         ' **Value** ' is a string not a **number**
+
+  * **_Methods help with strings_**
+    1. **Capitalize()**
+       * used to capitalize the first **letter** of string
+          ``` python
+            irst_name = 'malala'
+
+            first_name_cap = first_name.capitalize()
+            last_name_cap = last_name.capitalize()
+            print(first_name_cap)
+           ```
+           
+            Here the output will be " **Malala** ".
+       ---
+       
+     2. **Find()**
+       * Return the index of what i looking for
+          ``` python
+            note = 'award: Nobel Peace Prize'
+            
+            award_location = note.find('award: ')
+            print(award_location)
+           ```
+           
+            Here the output will be " **0** ".
+       ---
+              
+     2. **Slicing**
+       * Getting part of a string value
+          ``` python
+            note = 'award: Nobel Peace Prize'
+            
+            award_text = note[7:10]
+            print(award_text)
+           ```
+           
+            Here the output will be " **Nob** ".
+            
+          ###  Notes : 
+       ' **7** ' is a **Start**
+        ' **10** ' is a **End**
+       ---
 
   ***
      
