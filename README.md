@@ -2,8 +2,9 @@
 
 ##  - **_Section name_**
  * ###  _Topic_
- *  ###  Notes : 
- *  * ### 1st Challenge ' **Solve** '
+   ###  Notes : 
+  *  ### Section Question
+  * ### 1st Challenge ' **Solve** '
 
 
 
@@ -389,5 +390,10 @@
     
     ### What does this code do? 
     * Write the values from **values.txt** in **values-totaled.txt** and calculate the sum of all values, then write the result in **values-totaled.txt**.
+
+___
+ *  ### Section Question
+    * Why might you display statements for the user indicating when processing starts and when output is complete?
+      * Ans : **if you want to let the user know where in the process the program is when a program takes a long time to run.**
 
 
