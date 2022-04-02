@@ -1,5 +1,12 @@
 #  Programming Foundations: Beyond the Fundamentals
 
+##  - **_Section name_**
+ * ###  _Topic_
+ *  ###  Notes : 
+ *  * ### 1st Challenge ' **Solve** '
+
+
+
 ##  - **_Collections_**
 
    * ### Definitions
@@ -7,11 +14,7 @@
      2. **list** : simple collection that groups pieces of data together in a certain order and assigns the collection a name.
      3. **Dictionary** : Lets you store related information.
    ___
-    *  ### Section Question
-        1. what is the advantage of using a collection is?
-           * Ans : Indicates that multiple pieces of data are related
-
-   ***
+    
    * ###  list ( Array )
 
      **Create a list and work with it**
@@ -63,8 +66,8 @@
    Here the output will be the value of the flower key. ( California poppy )
     ***
 
-   * ### 1st Challenge
-    1. Replace variable with list " **stars** " .
+  * ### 1st Challenge
+   1. Replace variable with list " **stars** " .
    2. Create statement that prints fourth nearest star.
    3. Create dictionary " peaks " that stores all values.
    4. Create statement that prints name of highest peak on pacific plate.
@@ -102,7 +105,14 @@
 
    ```
    Here the output will be the value of the flower key. ( Wolf 359 & Kilimanjaro )
+   
+   
+   *  ### Section Question
+        1. what is the advantage of using a collection is?
+           * Ans : Indicates that multiple pieces of data are related
 
+
+***
 ***
 
 ## - **_Iteration_**
@@ -111,14 +121,7 @@
     2.  **Loop** : Code that iterates , moving from beginning to end of the process , then starting over . 
     3.  **Infinite** Loop : bug that occur when the ending condition is omitted or specified incorrectly .
   ---
-
-   *  ### Section Question
-       1. What is another term for code that iterates?
-          * Ans : **a loop** ( Code that iterates is often described as a loop, because the process moves from beginning to end and then starts over again at the beginning )
-
-  ***
-  ***
-    ### Iteration Tools ( looping Tools )
+   ### Iteration Tools ( looping Tools )
 
    * **_For loop_**
 
@@ -193,6 +196,11 @@
   ```
 
   Here the output will be "**Our fruit selection :**" title followed by each fruit name.
+  
+   *  ### Section Question
+       1. What is another term for code that iterates?
+          * Ans : **a loop** ( Code that iterates is often described as a loop, because the process moves from beginning to end and then starts over again at the beginning )
+
 
    ***
    ***
@@ -207,12 +215,6 @@
     
    ***
    
-   *  ### Section Question
-       1. Why do developers sometimes use shared code in their programs?
-          * Ans : **It can become tedious to have to rewrite code to solve the same problem over and over.**
-       2. How is a framework different from a library?
-           * Ans : **A framework essentially defines how you should accomplish a task. And gives you a structure to use as a starting point and customize.**
-   ***
   * **_Create Module & use it_**
 
        1. Create Module  ( testCode.py )
@@ -237,14 +239,23 @@
     1. **pandas** in python
     2. **jQuery** in JavaScript
 
-    ***
   * **_Examples for frameworks_**
 
     1. **Django** in python
     2. **React** in JavaScript
 
+ *** 
+   *  ### Section Question
+       1. Why do developers sometimes use shared code in their programs?
+          * Ans : **It can become tedious to have to rewrite code to solve the same problem over and over.**
+       2. How is a framework different from a library?
+           * Ans : **A framework essentially defines how you should accomplish a task. And gives you a structure to use as a starting point and customize.**
+
   ***
   ***
+  
+  
+  
 ##  - **_Working with strings_**
 
   * **_Combining Strings_**
@@ -297,15 +308,86 @@
            
             Here the output will be " **Nob** ".
             
-          ###  Notes : 
+     ###  Notes : 
        ' **7** ' is a **Start**
-        ' **10** ' is a **End**
+       ' **10** ' is a **End**
        ---
+       
+
+  * ###  _Regular expression_ , Also known as **regex**_
+
+      - allows you to create a description of a pattern that you want to match
+      
+   * **Made up of**
+      1. Letters
+      2. Numbers
+      3.  Special character
+
+  * Creating regular expressions
+    ``` python
+       import re
+
+      five_digit_zip = '98101'
+      nine_digit_zip = '98101-0003'
+      phone_number = '234-567-8901'
+
+      five_digit_expression = r'\d{5}'
+
+      print(re.search(five_digit_expression, five_digit_zip))
+      print(re.search(five_digit_expression, nine_digit_zip))
+      print(re.search(five_digit_expression, phone_number))
+    ```
 
   ***
+  
+ * ### 3rd Challenge
+   1. Take the value entered by a user.
+   2. Convert it to a value in Kilometers.
+   3. print the result to the terminal.
+
+  ```python
+    miles = input('Enter a distance in miles: ')
+    # kilometers_value = miles_value * 1.609344
+  ]
+  ```
+  
+  
+ * ### 3rd Challenge ' **Solve** '
+
+     ```python
+            miles = input('Enter a distance in miles: ')
+            miles_float = float(miles)
+            # kilometers_value = miles_value * 1.609344
+            kilometers = miles_float * 1.609344
+            print('That value in kilometers is')
+            print(kilometers)
+     ```
+     
+      Here the output will be input ' value * 1.609344 '
      
 
+***
+***
 
 
+##  - **_Input and Output_**
+
+ * ###  _Read and write txt files_
+
+     ```python
+      infile = open('values.txt', 'rt')
+      outfile = open('values-totaled.txt', 'wt')
+      print('Processing input')
+      sum = 0
+      for line in infile:
+          sum += int(line)
+          print(line.rstrip(), file=outfile)
+      print('\nTotal: ' + str(sum), file=outfile)
+      outfile.close()
+      print('Output complete')
+    ```
+    
+    ### What does this code do? 
+    * Write the values from **values.txt** in **values-totaled.txt** and calculate the sum of all values, then write the result in **values-totaled.txt**.
 
 
